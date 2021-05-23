@@ -123,7 +123,28 @@ const links = [
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
     color: "#663399",
   },
-]
+];
+function LinksList(props) {
+  const links = props.links;
+  return (links.map(link => 
+    <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+      <span>
+        <a
+          style={linkStyle}
+          href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+        >
+          {link.text}
+        </a>
+        {link.badge && (
+          <span style={badgeStyle} aria-label="New Badge">
+            NEW!
+          </span>
+        )}
+        <p style={descriptionStyle}>{link.description}</p>
+      </span>
+    </li>
+  ));
+};
 
 // markup
 const IndexPage = () => {
@@ -154,24 +175,7 @@ const IndexPage = () => {
             {docLink.text}
           </a>
         </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
+        <LinksList links={links} />
       </ul>
       <img
         alt="Gatsby G Logo"
