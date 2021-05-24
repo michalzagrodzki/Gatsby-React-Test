@@ -37,7 +37,7 @@ function LinksList(props) {
 };
 
 // markup
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   return (
     <main className={container}>
       <title>About Page</title>
@@ -63,4 +63,4 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default AboutPage
