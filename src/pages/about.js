@@ -26,17 +26,17 @@ const links = [
 function LinksList(props) {
   const links = props.links;
   return (links.map(link => 
-    <li key={link.url} class={listItemStyles}>
+    <li key={link.url} className={listItemStyles} style={{ color: link.color }}>
       <span>
-        <span class={linkStyle}>
+        <span className={linkStyle}>
           {link.text}
         </span>
         {link.badge && (
-          <span class={badgeStyle} aria-label="New Badge">
+          <span className={badgeStyle} aria-label="New Badge">
             NEW!
           </span>
         )}
-        <p class={descriptionStyle}>{link.description}</p>
+        <p className={descriptionStyle}>{link.description}</p>
       </span>
     </li>
   ));
