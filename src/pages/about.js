@@ -1,28 +1,22 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { container, listItemStyles, linkStyle, badgeStyle, descriptionStyle, headingStyles, headingAccentStyles, listStyles, docLinkStyle} from "./main.module.css"
 
-// data
-const links = [
-  {
-    text: "Learn new technology",
-    description:
-      "Gatsby is good introduction to creating simple projects with React. Many elements of build process are automated, which removes overhead.",
-    color: "#E95800",
-  },
-  {
-    text: "New approach",
-    description:
-      "Create landing pages with use of modern technologies and their advantages",
-    color: "#BC027F",
-  },
-  {
-    text: "New methods for deployment of landing pages",
-    description:
-      "Deploy landing pages to cloud providers with use of CI/CD",
-    color: "#663399",
-  },
-];
+// query
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        about {
+          links {
+            text, description, color
+          }
+        }
+      }
+    }
+  }
+`
+
 function LinksList(props) {
   const links = props.links;
   return (links.map((link, index) => 
@@ -43,7 +37,7 @@ function LinksList(props) {
 };
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <main className={container}>
       <title>About Page</title>
@@ -59,7 +53,7 @@ const IndexPage = () => {
         <li className={docLinkStyle}>
           <Link className={linkStyle} to="/">Main Page</Link>
         </li> 
-        <LinksList links={links} />
+        <LinksList links={data.site.siteMetadata.about.links} />
       </ul>
       <img
         alt="Gatsby G Logo"
