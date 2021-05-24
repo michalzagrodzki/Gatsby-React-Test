@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { container, listItemStyles, linkStyle, badgeStyle, descriptionStyle, headingStyles, headingAccentStyles, listStyles, docLinkStyle} from "./about.module.css"
+import { container, listItemStyles, linkStyle, badgeStyle, descriptionStyle, headingStyles, headingAccentStyles, listStyles, docLinkStyle} from "./main.module.css"
 
 // data
 const links = [
