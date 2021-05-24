@@ -50,9 +50,8 @@ const links = [
 ];
 function LinksList(props) {
   const links = props.links;
-  console.log("test")
-  return (links.map(link => 
-    <li key={link.url} className={listItemStyles} style={{ color: link.color }}>
+  return (links.map((link, index) => 
+    <li key={index} className={listItemStyles} style={{ color: link.color }}>
       <span>
         <a
           className={linkStyle}
