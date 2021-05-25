@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
@@ -5,7 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard',
+    'eslint:recommended',
     'prettier'
   ],
   parserOptions: {
