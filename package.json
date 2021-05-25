@@ -19,5 +19,16 @@
     "gatsby-plugin-gatsby-cloud": "^2.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "gatsby-plugin-prettier-eslint": "^1.0.6",
+    "prettier": "^2.3.0"
   }
 }
