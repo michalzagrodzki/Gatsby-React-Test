@@ -20,5 +20,7 @@ module.exports = {
     'react'
   ],
   rules: {
+    "eol-last": 1,
+    "max-len": 1
   }
 }
