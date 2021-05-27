@@ -17,7 +17,7 @@
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
 

@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable max-len */
+/* eslint-disable-next-line no-undef */
 module.exports = {
   siteMetadata: {
     title: "Gatsby-Test",
@@ -47,7 +48,7 @@ module.exports = {
             "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
           color: "#663399",
         },
-      ]
+      ],
     },
     about: {
       links: [
@@ -69,8 +70,8 @@ module.exports = {
             "Deploy landing pages to cloud providers with use of CI/CD",
           color: "#663399",
         },
-      ]
-    }
+      ],
+    },
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -79,7 +80,8 @@ module.exports = {
       options: {
         prettier: {
           patterns: [
-            // the pattern "**/*.{js,jsx,ts,tsx}" is not used because we will rely on `eslint --fix`
+            // the pattern "**/*.{js,jsx,ts,tsx}"
+            // is not used because we will rely on `eslint --fix`
             "**/*.{css,scss,less}",
             "**/*.{json,json5}",
             "**/*.{graphql}",
@@ -96,6 +98,6 @@ module.exports = {
           },
         },
       },
-    },  
+    },
   ],
 };

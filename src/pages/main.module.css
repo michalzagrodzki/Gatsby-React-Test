@@ -27,12 +27,11 @@
 }
 
 .linkStyle {
-  color: #8954A8;
+  color: #8954a8;
   font-weight: bold;
   font-size: 16px;
   vertical-align: 5%;
 }
-
 
 .docLinkStyle {
   composes: linkStyle;
