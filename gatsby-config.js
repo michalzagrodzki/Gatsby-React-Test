@@ -78,6 +78,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
+        watch: true,
+        prettierLast: true,
         prettier: {
           patterns: [
             // the pattern "**/*.{js,jsx,ts,tsx}"
@@ -92,6 +94,12 @@ module.exports = {
         },
         eslint: {
           patterns: "**/*.{js,jsx,ts,tsx}",
+          formatter: "stylish",
+          maxWarnings: undefined,
+          emitWarning: true,
+          failOnError: false,
+          failOnWarning: false,
+          plugins: [],
           customOptions: {
             fix: true,
             cache: true,
