@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import { Icon } from "./../components/icon";
 import {
@@ -73,6 +74,10 @@ const AboutPage = ({ data }) => {
       <Icon />
     </main>
   );
+};
+
+AboutPage.propTypes = {
+  data: PropTypes.string.isRequired,
 };
 
 export default AboutPage;
