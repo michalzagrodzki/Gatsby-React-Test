@@ -14,6 +14,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
+  settings: { react: { version: "latest" } },
   rules: {
     "eol-last": 1,
     "max-len": 1,

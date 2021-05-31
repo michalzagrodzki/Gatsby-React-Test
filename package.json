@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Gatsby-Test",
+  "engines": {
+    "node": "^12 || >=14"
+  },
   "author": "Michal Zagrodzki",
   "keywords": [
     "gatsby"
