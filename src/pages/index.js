@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import { Title } from "./../components/title";
 import { Header } from "./../components/header";
 import { Icon } from "./../components/icon";
 import {
@@ -69,12 +70,13 @@ function LinksList(props) {
 }
 // markup
 const IndexPage = ({ data }) => {
+  const pageTitle = data.site.siteMetadata.main.title;
   const headerTitle = data.site.siteMetadata.main.header.title;
   const headerCaption = data.site.siteMetadata.main.header.caption;
   const linksList = data.site.siteMetadata.main.links;
   return (
     <main className={container}>
-      <title>Home Page</title>
+      <Title title={pageTitle} />
       <Header title={headerTitle} caption={headerCaption} />
       <ul className={listStyles}>
         <li className={docLinkStyle}>
