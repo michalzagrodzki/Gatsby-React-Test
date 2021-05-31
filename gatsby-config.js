@@ -4,6 +4,10 @@ module.exports = {
   siteMetadata: {
     title: "Gatsby-Test",
     main: {
+      header: {
+        title: "Welcome",
+        caption: "— this is my first Gatsby site.",
+      },
       links: [
         {
           text: "Tutorial",
@@ -51,6 +55,10 @@ module.exports = {
       ],
     },
     about: {
+      header: {
+        title: "About",
+        caption: "— why I have created this site?",
+      },
       links: [
         {
           text: "Learn new technology",

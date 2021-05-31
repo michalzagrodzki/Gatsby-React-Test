@@ -49,14 +49,12 @@ function LinksList(props) {
 
 // markup
 const AboutPage = ({ data }) => {
-  const header = {
-    title: "About",
-    caption: "— why I have created this site?",
-  };
+  const headerTitle = data.site.siteMetadata.about.header.title;
+  const headerCaption = data.site.siteMetadata.about.header.caption;
   return (
     <main className={container}>
       <title>About Page</title>
-      <Header title={header.title} caption={header.caption} />
+      <Header title={headerTitle} caption={headerCaption} />
       <ul className={listStyles}>
         <li className={docLinkStyle}>
           <Link className={linkStyle} to="/">
