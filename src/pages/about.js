@@ -1,16 +1,11 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { Title } from "./../components/title";
 import { Header } from "./../components/header";
 import { Icon } from "./../components/icon";
-import { LinksList } from "./../components/linksList";
-import {
-  container,
-  linkStyle,
-  listStyles,
-  docLinkStyle,
-} from "./main.module.css";
+import { List } from "./../components/list";
+import { container } from "./main.module.css";
 
 // query
 export const query = graphql`
@@ -46,18 +41,15 @@ const AboutPage = ({ data }) => {
   const headerTitle = data.site.siteMetadata.about.header.title;
   const headerCaption = data.site.siteMetadata.about.header.caption;
   const linksList = data.site.siteMetadata.about.links;
+  const route = {
+    path: data.site.siteMetadata.main.route.path,
+    name: data.site.siteMetadata.main.route.name,
+  };
   return (
     <main className={container}>
       <Title title={pageTitle} />
       <Header title={headerTitle} caption={headerCaption} />
-      <ul className={listStyles}>
-        <li className={docLinkStyle}>
-          <Link className={linkStyle} to="/">
-            Main Page
-          </Link>
-        </li>
-        <LinksList links={linksList} />
-      </ul>
+      <List links={linksList} route={route} />
       <Icon />
     </main>
   );
