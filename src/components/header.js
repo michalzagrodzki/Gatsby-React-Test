@@ -1,6 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { headingStyles, headingAccentStyles } from "./../pages/main.module.css";
+import {
+  headingStyles,
+  headingAccentStyles,
+} from "./../styles/main.module.css";
 
 const Header = (props) => {
   const title = props.title;

@@ -6,7 +6,7 @@ import {
   linkStyle,
   listStyles,
   docLinkStyle,
-} from "./../pages/main.module.css";
+} from "./../styles/main.module.css";
 
 const List = (props) => {
   const links = props.links;

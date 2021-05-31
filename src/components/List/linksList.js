@@ -6,7 +6,7 @@ import {
   listItemStyles,
   badgeStyle,
   descriptionStyle,
-} from "./../../pages/main.module.css";
+} from "./../../styles/main.module.css";
 
 const LinksList = (props) => {
   const links = props.links;

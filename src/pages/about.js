@@ -5,7 +5,7 @@ import { Title } from "./../components/title";
 import { Header } from "./../components/header";
 import { Icon } from "./../components/icon";
 import { List } from "./../components/list";
-import { container } from "./main.module.css";
+import { container } from "./../styles/main.module.css";
 
 // query
 export const query = graphql`
