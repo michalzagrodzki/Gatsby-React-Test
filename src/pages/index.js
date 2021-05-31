@@ -4,12 +4,10 @@ import { Link, graphql } from "gatsby";
 import { Title } from "./../components/title";
 import { Header } from "./../components/header";
 import { Icon } from "./../components/icon";
+import { LinksList } from "./../components/linksList";
 import {
   container,
-  listItemStyles,
   linkStyle,
-  badgeStyle,
-  descriptionStyle,
   listStyles,
   docLinkStyle,
 } from "./main.module.css";
@@ -43,31 +41,6 @@ export const query = graphql`
   }
 `;
 
-// data
-function LinksList(props) {
-  const links = props.links;
-  return links.map((link, index) => (
-    <li key={index} className={listItemStyles} style={{ color: link.color }}>
-      <span>
-        <a
-          className={linkStyle}
-          href={`${link.url}
-              ?utm_source=starter&
-              utm_medium=start-page&
-              utm_campaign=minimal-starter`}
-        >
-          {link.text}
-        </a>
-        {link.badge && (
-          <span className={badgeStyle} aria-label="New Badge">
-            NEW!
-          </span>
-        )}
-        <p className={descriptionStyle}>{link.description}</p>
-      </span>
-    </li>
-  ));
-}
 // markup
 const IndexPage = ({ data }) => {
   const pageTitle = data.site.siteMetadata.main.title;
