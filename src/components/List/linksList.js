@@ -1,12 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { LinkHref } from "./../components/linkHref";
-import { LinkSpan } from "./../components/linkSpan";
+import { LinkHref } from "./linkHref";
+import { LinkSpan } from "./linkSpan";
 import {
   listItemStyles,
   badgeStyle,
   descriptionStyle,
-} from "./../pages/main.module.css";
+} from "./../../pages/main.module.css";
 
 const LinksList = (props) => {
   const links = props.links;

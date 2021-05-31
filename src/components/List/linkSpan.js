@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { linkStyle } from "./../pages/main.module.css";
+import { linkStyle } from "./../../pages/main.module.css";
 
 const LinkSpan = (props) => {
   const link = props.link;
