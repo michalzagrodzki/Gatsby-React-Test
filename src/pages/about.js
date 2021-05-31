@@ -1,6 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import { Header } from "./../components/header";
 import { Icon } from "./../components/icon";
 import {
   container,
@@ -8,8 +9,6 @@ import {
   linkStyle,
   badgeStyle,
   descriptionStyle,
-  headingStyles,
-  headingAccentStyles,
   listStyles,
   docLinkStyle,
 } from "./main.module.css";
@@ -50,19 +49,12 @@ function LinksList(props) {
 
 // markup
 const AboutPage = ({ data }) => {
+  const title = "About";
+  const caption = "— why I have created this site?";
   return (
     <main className={container}>
       <title>About Page</title>
-      <h1 className={headingStyles}>
-        About
-        <br />
-        <span className={headingAccentStyles}>
-          — why I have created this site?.
-        </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
+      <Header title={title} caption={caption} />
       <ul className={listStyles}>
         <li className={docLinkStyle}>
           <Link className={linkStyle} to="/">
