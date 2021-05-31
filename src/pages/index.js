@@ -58,12 +58,14 @@ function LinksList(props) {
 }
 // markup
 const IndexPage = ({ data }) => {
-  const title = "Welcome";
-  const caption = "— this is my first Gatsby site.";
+  const header = {
+    title: "Welcome",
+    caption: "— this is my first Gatsby site.",
+  };
   return (
     <main className={container}>
       <title>Home Page</title>
-      <Header title={title} caption={caption} />
+      <Header title={header.title} caption={header.caption} />
       <ul className={listStyles}>
         <li className={docLinkStyle}>
           <Link className={linkStyle} to="/about">
