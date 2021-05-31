@@ -19,6 +19,10 @@ export const query = graphql`
     site {
       siteMetadata {
         main {
+          header {
+            title
+            caption
+          }
           links {
             text
             url
@@ -58,8 +62,10 @@ function LinksList(props) {
 }
 // markup
 const IndexPage = ({ data }) => {
-  const headerTitle = data.site.siteMetadata.index.header.title;
-  const headerCaption = data.site.siteMetadata.index.header.caption;
+  console.log(data.site.siteMetadata.main);
+  const headerTitle = data.site.siteMetadata.main.header.title;
+  const headerCaption = data.site.siteMetadata.main.header.caption;
+  const linksList = data.site.siteMetadata.main.links;
   return (
     <main className={container}>
       <title>Home Page</title>
@@ -70,7 +76,7 @@ const IndexPage = ({ data }) => {
             About
           </Link>
         </li>
-        <LinksList links={data.site.siteMetadata.main.links} />
+        <LinksList links={linksList} />
       </ul>
       <Icon />
     </main>
@@ -78,7 +84,7 @@ const IndexPage = ({ data }) => {
 };
 
 IndexPage.propTypes = {
-  data: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default IndexPage;
