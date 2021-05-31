@@ -19,6 +19,7 @@ export const query = graphql`
     site {
       siteMetadata {
         main {
+          title
           header {
             title
             caption
@@ -28,6 +29,12 @@ export const query = graphql`
             url
             description
             color
+          }
+        }
+        about {
+          route {
+            name
+            path
           }
         }
       }
@@ -62,7 +69,6 @@ function LinksList(props) {
 }
 // markup
 const IndexPage = ({ data }) => {
-  console.log(data.site.siteMetadata.main);
   const headerTitle = data.site.siteMetadata.main.header.title;
   const headerCaption = data.site.siteMetadata.main.header.caption;
   const linksList = data.site.siteMetadata.main.links;

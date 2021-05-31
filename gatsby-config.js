@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: "Gatsby-Test",
     main: {
+      title: "Home Page",
       header: {
         title: "Welcome",
         caption: "— this is my first Gatsby site.",
@@ -53,8 +54,13 @@ module.exports = {
           color: "#663399",
         },
       ],
+      route: {
+        name: "Main Page",
+        path: "/",
+      },
     },
     about: {
+      title: "About Page",
       header: {
         title: "About",
         caption: "— why I have created this site?",
@@ -79,6 +85,10 @@ module.exports = {
           color: "#663399",
         },
       ],
+      route: {
+        name: "About",
+        path: "/about",
+      },
     },
   },
   plugins: [

@@ -19,6 +19,7 @@ export const query = graphql`
     site {
       siteMetadata {
         about {
+          title
           header {
             title
             caption
@@ -27,6 +28,12 @@ export const query = graphql`
             text
             description
             color
+          }
+        }
+        main {
+          route {
+            name
+            path
           }
         }
       }
